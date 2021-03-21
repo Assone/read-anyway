@@ -7,6 +7,7 @@ import './plugins/registerServiceWorker';
 import './plugins/hooks';
 import './plugins/interceptors';
 import './plugins/elementUI';
+import './plugins/directives';
 
 import api from './apis';
 
