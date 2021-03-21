@@ -1,0 +1,30 @@
+/* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after,  */
+@function util-extract-data($map, $keys) {
+  $length: length($keys);
+
+  @for $i from 2 through $length {
+    @if $map == null {
+      @return null;
+    }
+
+    $map: map-get($map, nth($keys, $i));
+  }
+
+  @return $map;
+}
+
+@function get($map, $keys...) {
+  @if $map == null {
+    @return null;
+  }
+
+  $map: map-get($map, nth($keys, 1));
+
+  @if length($keys) > 1 {
+    $map: util-extract-data($map, $keys);
+
+    @return $map;
+  } @else {
+    @return $map;
+  }
+}
