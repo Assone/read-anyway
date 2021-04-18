@@ -1,12 +1,17 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-  </div>
+<template lang="pug">
+.view-home
+  Banner
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component
+import Banner from '@/components/Banner.vue';
+
+@Component({
+  components: {
+    Banner,
+  },
+})
 export default class Home extends Vue {}
 </script>
