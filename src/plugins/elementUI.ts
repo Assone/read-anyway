@@ -17,6 +17,9 @@ import {
   Dialog,
   Input,
   Checkbox,
+  ButtonGroup,
+  Form,
+  FormItem,
 } from 'element-ui';
 
 import 'element-ui/lib/theme-chalk/index.css';
@@ -37,4 +40,7 @@ Vue.use(Button)
   .use(Autocomplete)
   .use(Dialog)
   .use(Input)
-  .use(Checkbox);
+  .use(Checkbox)
+  .use(ButtonGroup)
+  .use(Form)
+  .use(FormItem);

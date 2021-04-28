@@ -1,5 +1,5 @@
 <template lang="pug">
-el-autocomplete.header-search(placeholder='请输入要搜索的图书')
+el-autocomplete.header-search(placeholder='请输入要搜索的图书', suffix-icon='el-icon-search')
 </template>
 
 <script lang="ts">
@@ -11,8 +11,18 @@ export default class HeaderSearch extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @include b(header, search) {
-  width: 100%;
+  .el-input__inner {
+    background: #cbd9f5;
+
+    &::placeholder {
+      color: #777;
+    }
+  }
+
+  &[aria-expanded] .el-input__inner {
+    background: #fff;
+  }
 }
 </style>
