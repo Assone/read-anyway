@@ -2,7 +2,7 @@
 article.cover
   el-image(v-bind='$attrs')
   router-link.cover__name(v-if='id', :to='`/book/${id}`') {{ name }}
-  p.cover__author {{ author }}
+  p.cover__author(v-if='author') {{ author }}
 </template>
 
 <script lang="ts">

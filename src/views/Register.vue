@@ -16,7 +16,7 @@
     el-form-item
       el-checkbox(v-model='form.agree') 我同意xxxxx
     el-form-item
-      el-button 注册
+      el-button(:style='{ display: "block", width: "100%" }', type='primary') 注册
     el-form-item
       p 已有账号，请点击这里#[router-link(to='/login') 登陆]
 </template>
@@ -36,3 +36,10 @@ export default class Register extends Vue {
   };
 }
 </script>
+
+<style lang="scss" scoped>
+.view-register {
+  width: 400px;
+  margin: auto;
+}
+</style>

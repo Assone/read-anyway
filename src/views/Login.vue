@@ -10,7 +10,7 @@
     el-form-item
       el-checkbox(v-model='form.remenber') 下次自动登陆
     el-form-item
-      el-button(:style='{ display: "block", width: "100%" }') 登陆
+      el-button(:style='{ display: "block", width: "100%" }', type='primary') 登陆
     el-form-item
       el-row(type='flex', justify='space-between')
         el-col(:span='8')

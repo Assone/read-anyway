@@ -35,6 +35,10 @@ export default class Home extends Vue {
     { text: '计算机', path: '/?type=computer' },
     { text: '设计', path: '/?type=design' },
   ];
+
+  created() {
+    this.$api.getBookList();
+  }
 }
 </script>
 

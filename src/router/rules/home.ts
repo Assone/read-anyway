@@ -18,6 +18,12 @@ const rules: RouteConfig[] = [
     name: 'Register',
     component: () => import(/* webpackChunkName: "register" */ '@/views/Register.vue'),
   },
+  {
+    path: '/book/:id',
+    name: 'Book Detail',
+    props: (router) => ({ id: Number(router.params.id) }),
+    component: () => import(/* webpackChunkName: "book" */ '@/views/BookDetail.vue'),
+  },
 ];
 
 export default rules;

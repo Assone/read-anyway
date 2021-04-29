@@ -1,6 +1,7 @@
 import http from '@/libs/http';
 
-export const getBookList = () => http.get('/books');
+export const getBookList = (type?: string, sort = 'hot') =>
+  http.get('/books', { params: { type, sort } });
 export const getBookDetail = (id: string) => http.get('/book', { params: { id } });
 export const updateBookDetail = (
   id: string,
