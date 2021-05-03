@@ -1,5 +1,5 @@
 <template lang="pug">
-el-autocomplete.header-search(placeholder='请输入要搜索的图书', suffix-icon='el-icon-search')
+el-autocomplete.header-search(placeholder='请输入要搜索的图书', suffix-icon='el-icon-search', type='search')
 </template>
 
 <script lang="ts">

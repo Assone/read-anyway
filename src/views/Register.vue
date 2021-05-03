@@ -14,8 +14,6 @@
     el-form-item(label='验证码')
       el-input(v-model='form.verification', placeholder='请输入验证码')
     el-form-item
-      el-checkbox(v-model='form.agree') 我同意xxxxx
-    el-form-item
       el-button(:style='{ display: "block", width: "100%" }', type='primary') 注册
     el-form-item
       p 已有账号，请点击这里#[router-link(to='/login') 登陆]

@@ -8,14 +8,14 @@
       Cover(
         v-for='i in 6',
         :key='i',
-        :src='require("@/assets/logo.png")',
+        :src='require("@/assets/1.jpg")',
         :name='`name${i}`',
         :author='`author${i}`',
         :id='i'
       )
-  aside(style='width: 300px')
+  aside.aside(style='width: 300px')
     List(title='分类', :list='list', key-name='path', #default='{ path, text }')
-      router-link(:to='path') {{ text }}
+      router-link(:to='path', :style='{ "text-decoration": "none" }') {{ text }}
 </template>
 
 <script lang="ts">
@@ -32,6 +32,7 @@ import List from '@/components/List.vue';
 })
 export default class Home extends Vue {
   list = [
+    { text: '所有图书', path: '/' },
     { text: '计算机', path: '/?type=computer' },
     { text: '设计', path: '/?type=design' },
   ];
@@ -48,10 +49,18 @@ export default class Home extends Vue {
 }
 
 @include b(content) {
+  margin-right: 50px;
+
   @include e(container) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+
+    margin-top: 20px;
   }
+}
+
+@include b(aside) {
+  margin-top: 20px;
 }
 </style>

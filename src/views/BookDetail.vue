@@ -2,7 +2,7 @@
 el-container.view-book-detail
   el-main
     .book-meta
-      Cover.book-meta__cover(:src='require("@/assets/logo.png")')
+      el-image.book-meta__cover(:src='require("@/assets/logo.png")', fit='contain')
       .book-meta__info
         h1 {{ name }}
         p {{ author }}
